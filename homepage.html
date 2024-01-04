@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homepage</title>
+    <style>
+        .label {
+            background-color: lightgray;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Styles for the article label */
+        .article-label {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .about-me {
+            background-color: lightblue;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            transition: transform 0.3s ease;
+        }
+
+        .about-me:hover {
+            transition: 0.5s ease;
+            background-color: pink;
+            transition-delay: 0.1s;
+            transition-duration: 1s;
+            cursor: pointer;
+
+        }
+
+        /* Styles for the grid hover */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .grid-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Styles for the thank you and logout button */
+        .thank-you {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logout-button {
+            background-color: #f44336;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about-me">
+        <h2>About Me</h2>
+        <p>I'm Rowaon, Yasser E., a 19-year-old currently studying at TCGC Tangub City Global College, pursuing a
+            Bachelor of Science in Computer Science.</p>
+    </div>
+
+    <div class="label">
+        <center>
+            <h1>Welcome!</h1>
+            <h3>Feel free around and Enjoy!</h3>
+        </center>
+        <p class="article-label">The Lux Mundi Cup is an annual intramural sports event that brings together
+            participants from various backgrounds to engage in friendly competition. Named after "Lux Mundi," Latin for
+            "Light of the World," the cup embodies the spirit of illumination and unity through sports. It features a
+            range of athletic activities, fostering teamwork, sportsmanship, and a sense of community among
+            participants. The Lux Mundi Cup goes beyond the competition, creating an inclusive platform where
+            individuals can showcase their skills, build lasting connections, and contribute to a vibrant and spirited
+            atmosphere.</p>
+        <p class="article-label">Participating in Lux Mundi Cup intramurals was an exhilarating journey. From the
+            intense matches to the camaraderie with fellow competitors, every moment was a testament to the spirit of
+            sportsmanship. Whether scoring goals or cheering for teammates, the atmosphere was electric, making each
+            game a memorable experience. The sense of pride and unity among participants created a lasting bond, turning
+            Lux Mundi Cup into more than just a competition—it became a celebration of teamwork and shared passion for
+            sports.</p>
+    </div>
+
+    <div class="label">
+        <h2>Photos and Videos</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="Lux mundi Cup.jpg" alt="Photo 1">
+                <div class="caption">Caption for Photo 1</div>
+            </div>
+            <div class="grid-item">
+                <img src="Luminance.jpg" alt="Photo 2">
+                <div class="caption">Caption for Photo 2</div>
+            </div>
+            <div class="grid-item">
+                <img src="Cheerdance.jpg" alt="Photo 3">
+                <div class="caption">Caption for Photo 3</div>
+            </div>
+            <div class="grid-item">
+                <img src="Cheerdancers.jpg" alt="Photo 4">
+                <div class="caption">Breathtaking performance from our institute, deriving there Ego's.</div>
+            </div>
+            <div class="grid-item">
+                <img src="Dancesporters.jpg" alt="Photo 5">
+                <div class="caption">Caption for Video 2</div>
+            </div>
+            <div class="grid-item">
+                <img src="sayaw.jpg" alt="Photo 6">
+                <div class="caption">Captivating the tapestry of experience and unforgettable moment</div>
+            </div>
+            <div class="grid-item">
+                <img src="Mr. and Ms.jpg" alt="Photo 7">
+                <div class="caption">Caption for Photo 7</div>
+            </div>
+            <div class="grid-item">
+                <img src="Mr and Ms Participants.jpg" alt="Photo 8">
+                <div class="caption">Powerful presence and Luminatimg Egois pride of Mr and Ms TCGC.</div>
+            </div>
+            <div class="grid-item">
+                <div class="video-item">
+                    <video src="hahaha.mp4" controls></video>
+                    <div class="caption">Caption for Video 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="thank-you">
+        <h3>Thank you for visiting!</h3>
+        <button class="logout-button" onclick="window.location.href='index.html'">Logout</button>
+    </div>
+</body>
+
+</html>

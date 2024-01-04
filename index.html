@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url('loginbackground.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .form input[type="text"],
+        .form input[type="password"] {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #fff;
+            width: 100%;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .form input[type="submit"] {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        .form label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            font-size: 14px;
+            margin: 5px;
+        }
+
+        .form label input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .form a {
+            color: #fff;
+            text-decoration: none;
+            color: lightblue;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .loading {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .guide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form" action="homepage.html" onsubmit="return validateForm()">
+            <h2>Login</h2>
+            <label>
+                Username:
+                <input type="text" name="username" required>
+            </label>
+            <label>
+                Password:
+                <input type="password" name="password" required>
+            </label>
+            <label>
+                <input type="checkbox" name="remember-me">
+                Remember me
+            </label>
+            <input type="submit" value="Login">
+            <a href="forgot.html">Forgot password?</a>
+        </form>
+        <div class="guide">Please enter your username and password to login.</div>
+        <div class="loading" id="loading">Loading...</div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.forms[0].username.value;
+            var password = document.forms[0].password.value;
+
+            if (username === "rawawawun@yahoo.mom" && password === "goatsins") {
+                showLoadingAnimation();
+                return true;
+            } else {
+                alert("Username or Password is Incorrect HAHA");
+                return false;
+            }
+        }
+
+        function showLoadingAnimation() {
+            var loading = document.getElementById("loading");
+            loading.style.display = "block";
+
+            setTimeout(function () {
+                window.location.href = "homepage.html";
+            }, 3000);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.querySelector(".form");
+            form.style.animation = "fadeIn 1s ease-in-out";
+            form.style.animationFillMode = "forwards";
+
+            var guide = document.querySelector(".guide");
+            guide.style.animation = "slideIn 1s ease-in-out";
+            guide.style.animationFillMode = "forwards";
+        });
+    </script>
+</body>
+
+</html>
